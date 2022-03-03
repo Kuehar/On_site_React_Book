@@ -27,9 +27,27 @@ function func(){
   console.log(foobar2);
 }
 */
-
+/*
 // P.19 2.2.1.3
 // constは定数なので代入できない例
 const baz = 2;
 baz = 100;
 console.log(baz);
+*/
+
+// P.19 2.2.1.4
+class Human{
+  // コンストラクタ
+  constructor(name:string){
+    this.name = name;
+  }
+
+  // インスタンスメソッド
+  say(){
+    console.log('Hello My name is ' + this.name + ' .');
+  }
+}
+
+const Taro = new Human('Taro');
+
+Taro.say();
