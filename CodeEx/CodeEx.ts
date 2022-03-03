@@ -10,10 +10,8 @@ function func(){
   console.log(foobar);
 }
 func();
-*/
 
 // P.18 2.2.1.2
-/*
 let bar = 1;
 const baz = 2;
 
@@ -26,14 +24,11 @@ function func(){
   console.log(foobar1); 
   console.log(foobar2);
 }
-*/
-/*
 // P.19 2.2.1.3
 // constは定数なので代入できない例
 const baz = 2;
 baz = 100;
 console.log(baz);
-*/
 
 // P.19 2.2.1.4
 class Human{
@@ -51,3 +46,30 @@ class Human{
 const Taro = new Human('Taro');
 
 Taro.say();
+
+*/
+
+class Human{
+  constructor(name:string){
+    this.name = name
+  }
+
+  say(){
+    console.log('Hello My name is ' + this.name + ' .');
+  }
+}
+
+
+// Humanを継承してHumanAdvancedを作成している
+class HumanAdvanced extends Human{
+  say(){
+    console.log('I am ' + this.name + '. Thanks.');
+  }
+}
+
+const Taro = new Human('Taro');
+const Hanako = new HumanAdvanced('Hanako');
+
+Taro.say(); // Hello My name is Taro.
+Hanako.say(); // I am Hanako. Thanks.
+
