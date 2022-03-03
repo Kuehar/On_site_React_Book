@@ -47,7 +47,7 @@ const Taro = new Human('Taro');
 
 Taro.say();
 
-*/
+
 
 class Human{
   constructor(name:string){
@@ -72,4 +72,19 @@ const Hanako = new HumanAdvanced('Hanako');
 
 Taro.say(); // Hello My name is Taro.
 Hanako.say(); // I am Hanako. Thanks.
+
+*/
+
+// P.21 2.2.1.6
+var name:string = 'Taro';
+
+var message:string = 'Hello my name is ' + name + ' .';
+console.log(message); // Hello my name is Taro.
+
+const message2:string = `Hello my name is ${name}.`;
+
+const message3:string = `
+I am ${name}.
+Thanks.
+`;
 
