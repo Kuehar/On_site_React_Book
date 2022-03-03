@@ -73,8 +73,6 @@ const Hanako = new HumanAdvanced('Hanako');
 Taro.say(); // Hello My name is Taro.
 Hanako.say(); // I am Hanako. Thanks.
 
-*/
-
 // P.21 2.2.1.6
 var name:string = 'Taro';
 
@@ -87,4 +85,24 @@ const message3:string = `
 I am ${name}.
 Thanks.
 `;
+
+*/
+
+// P.22 2.2.1.7
+let a,b;
+[a,b] = [1,2];
+console.log(a); // 1.
+console.log(b); // 2.
+
+// 定義されたオブジェクトから相当する名前の変数へまとめて展開
+const list = {
+  foo: 1,
+  bar: 2,
+  baz: 3
+}
+
+const { foo,bar,baz} = list;
+console.log(foo); // 1
+console.log(bar); // 2
+console.log(baz); // 3
 
