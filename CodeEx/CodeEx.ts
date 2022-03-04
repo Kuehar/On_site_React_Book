@@ -115,12 +115,32 @@ const Hello = () => React.createElement("p", { className: "Hello" }, "Hello, wor
 
 export default Hello; // <p class="hello">Hello world!!</p>
 
-*/
 
 // P.2.3.1.3
 // JSXを使用したDOM定義
+// こちらの方がXML風の「開始タグ」と「終了タグ」によるマークアップが採用されているためチーム開発では採用されやすい。
 const Hello = () => {
   return <p className='hello'>Hello world!!</p>;
 }
 export default Hello; // <p class="hello">Hello world!!</p>
 
+*/
+
+// P.36 2.3.1.5
+// React標準APIによるDOM定義(入れ子)
+const Hello = () => React.createElement(
+  'section',
+  { className:'box'},
+  React.createElement(
+    'h1',
+    null,
+    'message'
+  ),
+  React.createElement(
+    'p',
+    {className:'hello'},
+    'Hello world!!'
+  )
+);
+
+export default Hello;
