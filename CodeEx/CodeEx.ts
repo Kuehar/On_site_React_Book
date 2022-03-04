@@ -108,10 +108,19 @@ console.log(foo); // 1
 console.log(bar); // 2
 console.log(baz); // 3
 
-*/
 
-// P.36 2.3.1.3
+// P.36 2.3.1.2
 // React標準APIによるDOM定義
 const Hello = () => React.createElement("p", { className: "Hello" }, "Hello, world!!");
 
-export default Hello;
+export default Hello; // <p class="hello">Hello world!!</p>
+
+*/
+
+// P.2.3.1.3
+// JSXを使用したDOM定義
+const Hello = () => {
+  return <p className='hello'>Hello world!!</p>;
+}
+export default Hello; // <p class="hello">Hello world!!</p>
+
