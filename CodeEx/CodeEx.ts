@@ -124,7 +124,7 @@ const Hello = () => {
 }
 export default Hello; // <p class="hello">Hello world!!</p>
 
-*/
+
 
 // P.36 2.3.1.5
 // React標準APIによるDOM定義(入れ子)
@@ -142,5 +142,17 @@ const Hello = () => React.createElement(
     'Hello world!!'
   )
 );
+
+export default Hello;
+*/
+
+const Hello = () => {
+  return (
+    <section className="box">
+      <h1>Message</h1>
+      <p className="hello">Hello world!!</p>
+    </section>
+  )
+};
 
 export default Hello;
