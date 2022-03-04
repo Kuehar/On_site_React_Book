@@ -1,3 +1,5 @@
+import React from 'react';
+
 // P.18 2.2.1.1
 /*
 var foo = 0;
@@ -86,7 +88,7 @@ I am ${name}.
 Thanks.
 `;
 
-*/
+
 
 // P.22 2.2.1.7
 let a,b;
@@ -106,3 +108,10 @@ console.log(foo); // 1
 console.log(bar); // 2
 console.log(baz); // 3
 
+*/
+
+// P.36 2.3.1.3
+// React標準APIによるDOM定義
+const Hello = () => React.createElement("p", { className: "Hello" }, "Hello, world!!");
+
+export default Hello;
